@@ -1,0 +1,5 @@
+.card-form__number-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  column-gap: 15px;
+}

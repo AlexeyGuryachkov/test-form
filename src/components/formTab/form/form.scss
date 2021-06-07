@@ -19,16 +19,15 @@
     transition: $transition-main;
     border-radius: 5px;
     background-color: $input-color;
+    border: 1px solid $input-color;
+
+    &:autofill {
+      display: none;
+    }
 
     &.invalid {
       border-color: $input-error-color;
     }
-  }
-
-  &__number-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    column-gap: 15px;
   }
 
   &__input-block {
@@ -42,134 +41,6 @@
 
     .card-form__input {
       width: 100%;
-    }
-  }
-
-  &__select-wrapper {
-    display: flex;
-    margin-top: 10px;
-  }
-
-  &__select {
-    margin-right: 15px;
-
-    &-cheked-option {
-      position: relative;
-      width: 70px;
-      padding: 10px 40px 10px 12px;
-      border-radius: 5px;
-      background-color: $input-color;
-
-      & > span {
-        color: $dark-font;
-        font-size: 14px;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 15px;
-        right: 20px;
-        width: 1px;
-        height: 10px;
-        transform: rotate(-45deg);
-        transition: $transition-main;
-        background-color: $gray-font;
-      }
-
-      &:hover::after {
-        background-color: $black-font;
-      }
-
-      &::before {
-        position: absolute;
-        content: "";
-        top: 15px;
-        right: 13px;
-        width: 1px;
-        height: 10px;
-        transform: rotate(45deg);
-        transition: $transition-main;
-        background-color: $gray-font;
-      }
-
-      &:hover::before {
-        background-color: $black-font;
-      }
-    }
-
-    &-list {
-      width: 100%;
-      height: 100%;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      color: $dark-font;
-
-      &.show-select {
-        display: block;
-      }
-
-      &-wrapper {
-        width: 50px;
-        height: 0px;
-        padding: 0;
-        pointer-events: none;
-        overflow: hidden;
-        opacity: 0;
-        border-radius: 8px;
-        background-color: $input-color;
-
-        &.show-select {
-          padding: 5px 5px 5px 0;
-          height: 100px;
-          pointer-events: auto;
-          opacity: 1;
-
-          & + .super-select-cheked-option {
-            display: none;
-          }
-        }
-      }
-
-      &::-webkit-scrollbar {
-        width: 3px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        border-radius: 20px;
-        background-color: $gray-font;
-      }
-
-      &-item {
-        cursor: pointer;
-
-        &:hover {
-          background-color: $gray-font;
-          color: $active-font;
-        }
-      }
-    }
-  }
-
-  .submit-button {
-    margin-top: 35px;
-    padding: 15px;
-    transition: $transition-main;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 0.75px;
-    color: $active-font;
-    background-color: $blue-color;
-
-    &:hover {
-      opacity: 0.9;
-      box-shadow: $button-blue-shadow;
-    }
-
-    &:active {
-      opacity: 1;
     }
   }
 }

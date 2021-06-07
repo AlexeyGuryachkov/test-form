@@ -29,4 +29,27 @@
       }
     }
   }
+
+  .pay-button {
+    width: 100%;
+    margin-top: 35px;
+    padding: 15px;
+    transition: $transition-main;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.75px;
+    color: $active-font;
+    background-color: $blue-color;
+
+    &:hover {
+      opacity: 0.9;
+      box-shadow: $button-blue-shadow;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }

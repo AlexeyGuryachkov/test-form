@@ -1,9 +1,12 @@
 @import "./colors.scss";
 @import "./fonts.scss";
 @import "./variables.scss";
+
 @import "../components/sidebar/sidebar.scss";
 @import "../components/formTab/formTab.scss";
 @import "../components/formTab/form/form.scss";
+@import "../components/formTab/form/numberInput/numberInput.scss";
+@import "../components/formTab/form/dateInput/dateInput.scss";
 
 * {
   padding: 0;
