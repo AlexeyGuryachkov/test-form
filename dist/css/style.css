@@ -107,7 +107,7 @@
   border: 1px solid #f0f0f0;
 }
 
-.card-form__input:not([readonly]):focus {
+.card-form__input:focus {
   border: 1px solid rgba(66, 83, 255, 0.5);
 }
 

@@ -21,7 +21,7 @@
     background-color: $input-color;
     border: 1px solid $input-color;
 
-    &:not([readonly]):focus {
+    &:not([readonly], .invalid):focus {
       border: 1px solid rgba($blue-color, 0.5);
     }
 
