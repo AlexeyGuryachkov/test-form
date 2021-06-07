@@ -1,0 +1,44 @@
+@mixin bg-image($url, $position: center, $size: cover) {
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  order: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0px 45px 0px;
+  background-color: $gray-bg-color;
+
+  .nav-menu {
+    .nav-menu__item {
+      &--tab {
+        display: block;
+        padding: 10px 70px 10px 30px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        transition: $transition-main;
+      }
+
+      &:hover {
+        .nav-menu__item--tab {
+          color: $active-font;
+        }
+      }
+    }
+  }
+
+  .logo-wrapper {
+    padding-left: 30px;
+
+    .logo {
+      width: 65px;
+      height: 20px;
+      @include bg-image("../../img/nav-logo.png");
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tapir test</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<div class="modal-wrapper">
+				<section class="content content-1" id="tab-1">
+					Первая ссылка
+				</section>
+				<section class="content content-2" id="tab-2">
+					@@include('./components/formTab/formTab.html')
+				</section>
+				<section class="content content-3" id="tab-3">
+					Третья ссылка
+				</section>
+				<section class="content content-4" id="tab-4">
+					Четвёртая ссылка
+				</section>
+				@@include('./components/sidebar/sidebar.html')
+		</div>
+	</div>
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>

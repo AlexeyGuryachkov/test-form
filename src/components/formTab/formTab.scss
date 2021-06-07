@@ -1,0 +1,32 @@
+.form-tab {
+  .main-title {
+    & > span {
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: 0.75px;
+    }
+  }
+
+  .card-info {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    column-gap: 50px;
+
+    &__label {
+      & > span {
+        font-size: 14px;
+        line-height: 18px;
+        color: $gray-font;
+      }
+    }
+
+    &__value {
+      & > span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}

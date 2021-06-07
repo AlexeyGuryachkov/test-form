@@ -1,0 +1,80 @@
+<form onSubmit="return sendForm()" class="card-form" name="card-data">
+	<label class="card-form__title" for=""><span>номер карты</span></label>
+	<div class="card-form__number-wrapper">
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+		>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+		>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+			>
+			<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+		>
+	</div>
+	<label class="card-form__title" for="name"><span>держатель карты</span></label>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="name"
+			autocomplete="off"
+			placeholder="Иванов Иван Иванович"
+		>
+
+	<div class="card-form__input-block">
+		<div class="card-form__date-wrapper">
+			<label class="card-form__title" for="cvc"><span>Срок действия</span></label>
+			<div class="card-form__select-wrapper">
+				<div class="card-form__select-month">
+					<div class="card-form__select">
+						<div class="card-form__select-list-wrapper">
+							<div class="card-form__select-list">
+							</div>
+						</div>
+						<div class="card-form__select-cheked-option" id='card-form__select'>
+							<span class="card-form__select-cheked-span" id='card-form__select-value'>01</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-form__select-day">
+					<div class="card-form__select">
+						<div class="card-form__select-list-wrapper">
+							<div class="card-form__select-list">
+							</div>
+						</div>
+						<div class="card-form__select-cheked-option" id='card-form__select'>
+							<span class="card-form__select-cheked-span" id='card-form__select-value'>01</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-form__cvc-wrapper">
+			<label class="card-form__title" for="cvc"><span>CVC</span></label>
+				<input 
+					class="card-form__input"
+					type="text"
+					name="cvc"
+					autocomplete="off"
+				>
+		</div>
+	</div>
+	<button class="submit-button" type="submit">оплатить</button>
+</form>

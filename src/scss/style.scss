@@ -1,0 +1,73 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "../components/sidebar/sidebar.scss";
+@import "../components/formTab/formTab.scss";
+@import "../components/formTab/form/form.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+  cursor: url("../img/cursor.svg"), auto;
+
+  &:hover {
+    cursor: url("../img/cursor.svg"), auto;
+  }
+
+  a {
+    color: $gray-font;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+
+  body {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: $black-bg-color;
+
+  .modal-wrapper {
+    position: absolute;
+    display: flex;
+    height: 515px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .content {
+      display: none;
+      height: 100%;
+      width: 395px;
+      padding: 35px;
+      background-color: $white-bg-color;
+
+      &:target {
+        display: block;
+        order: 1;
+      }
+    }
+
+    & > #tab-1:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-1"],
+    & > #tab-2:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-2"],
+    & > #tab-3:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-3"],
+    & > #tab-4:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-4"] {
+      background-color: $black-bg-color;
+      color: $active-font;
+    }
+  }
+}

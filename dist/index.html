@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tapir test</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<div class="modal-wrapper">
+				<section class="content content-1" id="tab-1">
+					Первая ссылка
+				</section>
+				<section class="content content-2" id="tab-2">
+					<div class="form-tab">
+	<h1 class="main-title"><span>Заголовок страницы</span></h1>
+	<div class="card-info">
+		<div class="card-info__label"><span>Номер счёта</span></div><div class="card-info__value"><span>786 456 893993873</span></div>
+		<div class="card-info__label"><span>Сумма платежа</span></div><div class="card-info__value"><span>2 790</span></div>
+	</div>
+	<form onSubmit="return sendForm()" class="card-form" name="card-data">
+	<label class="card-form__title" for=""><span>номер карты</span></label>
+	<div class="card-form__number-wrapper">
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+		>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+		>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+			>
+			<input 
+			class="card-form__input"
+			type="text"
+			name="number"
+			autocomplete="off"
+			readonly
+		>
+	</div>
+	<label class="card-form__title" for="name"><span>держатель карты</span></label>
+		<input 
+			class="card-form__input"
+			type="text"
+			name="name"
+			autocomplete="off"
+			placeholder="Иванов Иван Иванович"
+		>
+
+	<div class="card-form__input-block">
+		<div class="card-form__date-wrapper">
+			<label class="card-form__title" for="cvc"><span>Срок действия</span></label>
+			<div class="card-form__select-wrapper">
+				<div class="card-form__select-month">
+					<div class="card-form__select">
+						<div class="card-form__select-list-wrapper">
+							<div class="card-form__select-list">
+							</div>
+						</div>
+						<div class="card-form__select-cheked-option" id='card-form__select'>
+							<span class="card-form__select-cheked-span" id='card-form__select-value'>01</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-form__select-day">
+					<div class="card-form__select">
+						<div class="card-form__select-list-wrapper">
+							<div class="card-form__select-list">
+							</div>
+						</div>
+						<div class="card-form__select-cheked-option" id='card-form__select'>
+							<span class="card-form__select-cheked-span" id='card-form__select-value'>01</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-form__cvc-wrapper">
+			<label class="card-form__title" for="cvc"><span>CVC</span></label>
+				<input 
+					class="card-form__input"
+					type="text"
+					name="cvc"
+					autocomplete="off"
+				>
+		</div>
+	</div>
+	<button class="submit-button" type="submit">оплатить</button>
+</form>
+</div>
+				</section>
+				<section class="content content-3" id="tab-3">
+					Третья ссылка
+				</section>
+				<section class="content content-4" id="tab-4">
+					Четвёртая ссылка
+				</section>
+				<aside class="sidebar-wrapper">
+	<nav>
+		<ul class="nav-menu">
+			<li class="nav-menu__item"><a class="nav-menu__item--tab" href="#tab-1">Первая ссылка</a></li>
+			<li class="nav-menu__item"><a class="nav-menu__item--tab" href="#tab-2">Вторая ссылка</a></li>
+			<li class="nav-menu__item"><a class="nav-menu__item--tab" href="#tab-3">Третья ссылка</a></li>
+			<li class="nav-menu__item"><a class="nav-menu__item--tab" href="#tab-4">Четвёртая ссылка</a></li>
+		</ul>
+	</nav>
+	<div class="logo-wrapper"><div class="logo"></div></div>
+</aside>
+		</div>
+	</div>
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>
