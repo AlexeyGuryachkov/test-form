@@ -238,10 +238,36 @@ document.onclick = (e) => {
 			selectDaysListWrpr.classList.remove('show-select')
 		}
 	}
+
 	if (!monthSelect.contains(e.target)){
 
 		if (selectMonthsListWrpr.classList.contains('show-select')){
 			selectMonthsListWrpr.classList.remove('show-select')
 		}
 	}
+
+	if (!document.getElementById('nav-menu').contains(e.target) && !burgerButton.contains(e.target)) {
+
+		if (burgerWrapper.classList.contains('show')){
+			burgerWrapper.classList.remove('show')
+		}
+	}
+
+	Array.from(navLinks).forEach(item => {
+		if (item.contains(e.target)) {
+
+			if (burgerWrapper.classList.contains('show')){
+				burgerWrapper.classList.remove('show')
+			}
+		}
+	})
+}
+
+const navLinks = document.getElementsByClassName('nav-menu__item--tab')
+const burgerWrapper = document.getElementById('burger-wrapper')
+const burgerButton = document.getElementById('burger-button')
+
+// бургер
+const burgerClick = () => {
+	burgerWrapper.classList.add('show')
 }

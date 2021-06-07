@@ -21,6 +21,10 @@
   color: #fff;
 }
 
+.sidebar-wrapper .nav-menu__mobile-button {
+  display: none;
+}
+
 .sidebar-wrapper .logo-wrapper {
   padding-left: 30px;
 }
@@ -32,6 +36,53 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 625px) {
+  .sidebar-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+  .sidebar-wrapper .nav-menu__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 40%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.15s ease-in-out;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+  }
+  .sidebar-wrapper .nav-menu__wrapper.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sidebar-wrapper .nav-menu__wrapper.show .nav-menu {
+    right: 0;
+    transition: all 0.15s ease-in-out;
+    padding-top: 40px;
+  }
+  .sidebar-wrapper .nav-menu__wrapper .nav-menu {
+    position: absolute;
+    height: 100%;
+    right: -100%;
+    background-color: #0d0d0d;
+  }
+  .sidebar-wrapper .nav-menu__mobile-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url("../../img/burger.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .form-tab .main-title > span {
@@ -107,7 +158,7 @@
   border: 1px solid #f0f0f0;
 }
 
-.card-form__input:focus {
+.card-form__input:not([readonly]):not(.invalid):focus {
   border: 1px solid rgba(66, 83, 255, 0.5);
 }
 
@@ -141,6 +192,12 @@
   display: grid;
   grid-template-columns: repeat(4, 70px);
   column-gap: 15px;
+}
+
+@media (max-width: 625px) {
+  .card-form__number-wrapper {
+    column-gap: 8px;
+  }
 }
 
 .card-form__select-wrapper {
@@ -289,6 +346,7 @@ html {
 html body {
   width: 100%;
   height: 100%;
+  background-color: #000;
 }
 
 .page-wrapper {
@@ -312,11 +370,11 @@ html body {
   width: 395px;
   padding: 35px;
   background-color: #fff;
+  order: 1;
 }
 
 .page-wrapper .modal-wrapper .content:target {
   display: block;
-  order: 1;
 }
 
 .page-wrapper .modal-wrapper > #tab-1:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-1"],
@@ -325,4 +383,21 @@ html body {
 .page-wrapper .modal-wrapper > #tab-4:target ~ .sidebar-wrapper > nav > .nav-menu > .nav-menu__item > a[href="#tab-4"] {
   background-color: #000;
   color: #fff;
+}
+
+@media (max-width: 625px) {
+  .page-wrapper {
+    background-color: #fff;
+  }
+  .page-wrapper .modal-wrapper {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    height: 100%;
+  }
+  .page-wrapper .modal-wrapper .content {
+    width: auto;
+    max-width: 375px;
+    margin: auto;
+  }
 }

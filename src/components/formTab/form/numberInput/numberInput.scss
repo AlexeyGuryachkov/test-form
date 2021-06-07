@@ -3,3 +3,9 @@
   grid-template-columns: repeat(4, 70px);
   column-gap: 15px;
 }
+
+@media (max-width: 625px) {
+  .card-form__number-wrapper {
+    column-gap: 8px;
+  }
+}
