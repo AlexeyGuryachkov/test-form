@@ -101,7 +101,7 @@ form.number.forEach((item, index) => {
 			// если поле не пустое, то убираю блокировку
 			if (item.value.length !==0 && item.hasAttribute("readonly", "readonly")){
 				item.removeAttribute("readonly", "readonly")
-			}
+			} 
 		}
 	}
 })

@@ -21,6 +21,14 @@
     background-color: $input-color;
     border: 1px solid $input-color;
 
+    &:not([readonly]):focus {
+      border: 1px solid rgba($blue-color, 0.5);
+    }
+
+    &:not([readonly]):hover {
+      box-shadow: $input-hover-shadow;
+    }
+
     &:autofill {
       display: none;
     }

@@ -16,6 +16,10 @@
       background-color: $input-color;
       transition: $transition-main;
 
+      &:hover {
+        box-shadow: $input-hover-shadow;
+      }
+
       & > span {
         color: $dark-font;
         font-size: 14px;
@@ -81,6 +85,7 @@
           height: 125px;
           pointer-events: auto;
           opacity: 1;
+          box-shadow: $input-hover-shadow;
 
           & + .card-form__select-cheked-option {
             height: 0;
