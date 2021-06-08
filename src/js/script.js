@@ -17,7 +17,7 @@ const sendForm = () => {
 		alert(
 			`
 			card number: ${cardNumber}
-			name: ${form.name.value}
+			name: ${form.name.value.replace(/\s\s+/g, ' ')}
 			cvc: ${form.cvc.value}
 			date: ${selectDayValue.textContent} ${selectMonthValue.textContent}
 			`
@@ -97,19 +97,19 @@ form.number.forEach((item, index) => {
 			if (item.classList.contains('invalid')) {
 				item.classList.remove('invalid');
 			}
-
-			// если поле не пустое, то убираю блокировку
-			if (item.value.length !==0 && item.hasAttribute("readonly", "readonly")){
-				item.removeAttribute("readonly", "readonly")
-			} 
 		}
+
+		// если поле не пустое, то убираю блокировку
+		if (item.value.length !==0 && item.hasAttribute("readonly", "readonly")){
+			item.removeAttribute("readonly", "readonly")
+		} 
 	}
 })
 
 // валидация имени
 form.name.oninput = () => {
 	// подсвечиваю, если введены не только латинские буквы
-	if (!/^[a-zA-Z]+$/.test(form.name.value) && form.name.value.length !== 0) {
+	if (!/^[a-zA-Z\s]+$/.test(form.name.value) && form.name.value.length !== 0) {
 		form.name.classList.add('invalid')
 	} else {
 
@@ -119,7 +119,7 @@ form.name.oninput = () => {
 	}
 
 // валидация
-	/^[a-zA-Z]+$/.test(form.name.value) && form.name.value.length > 3 ? nameValid = true : nameValid = false
+	/^[a-zA-Z\s]+$/.test(form.name.value) && form.name.value.length > 3 ? nameValid = true : nameValid = false
 }
 
 form.name.onblur = () => {
